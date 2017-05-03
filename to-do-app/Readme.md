@@ -1,0 +1,3 @@
+Work in progress...
+
+A simple yet efficient and very useful To-Do List App. Made using React.js.
