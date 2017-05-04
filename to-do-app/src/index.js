@@ -4,4 +4,4 @@ import ToDo from './components/ToDo';
 import './style.css';
 
 
-ReactDOM.render(<ToDo />, document.getElementById('root'));
+ReactDOM.render(<ToDo />, document.getElementById('app-box'));
