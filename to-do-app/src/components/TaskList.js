@@ -13,7 +13,7 @@ class TaskList extends React.Component {
   	//var uKey = Date.now();
   	var mapList = this.props.list.map((elem, i) => {
   		return (
-  			<div className="taskElement" key={i}><span>{elem}</span><button onClick={this.remove}></button></div> 
+  			<div className="taskElement" key={i}><span>{elem}</span><button onClick={this.remove}>DONE</button></div> 
   		)
   	});
     return (

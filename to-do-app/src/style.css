@@ -3,7 +3,7 @@
 
 html {
 	box-sizing: border-box;
-	background-color: #fff;
+	background-color: #FF9800;
 }
 
 h1 {
@@ -30,10 +30,23 @@ input {
 
 button {
 	float: right;
+    margin: 3px 6px 0 0;
+    padding: 1px 3px 2px 3px;
+    border-color: #9C27B0;
+    background-color: #9C27B0;
+    color: #fff;
+    border-radius: 1em;
+    font-weight: 900;
 }
 
 ::-webkit-input-placeholder {
 	color: #757575;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	padding-top: 20px;
 }
 
 span {
@@ -53,10 +66,10 @@ span {
 }
 
 .taskElement {
-	border: 1px solid white;
+	border: 1px solid #000;
     text-align: left;
     margin-bottom: 8px;
     width: 92%;
     padding: 2px 0px 6px 9px;
-    box-shadow: 0 0px 6px #a9a8a8;
+    box-shadow: 0 0px 3px #9C27B0;
 }

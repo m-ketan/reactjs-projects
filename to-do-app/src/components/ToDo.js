@@ -18,6 +18,7 @@ class ToDo extends React.Component {
   }
   updatedTask(inpVal) {
   	var updateTask = this.state.tasks;
+  	//Prepend any newly added task.
   	updateTask.unshift(inpVal);
   	this.setState({
   		tasks: updateTask
