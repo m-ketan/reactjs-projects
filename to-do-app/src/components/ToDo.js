@@ -2,7 +2,12 @@ import React from 'react';
 import AddTask from './AddTask';
 import TaskList from './TaskList';
 
-const ListTask = [];
+var ListTask = [];
+var sTasks = localStorage.getItem('storedTasks');
+if (sTasks) {
+	ListTask = JSON.parse(sTasks);
+}
+
 
 class ToDo extends React.Component {
   constructor(props) {
@@ -13,10 +18,11 @@ class ToDo extends React.Component {
   }
   updatedTask(inpVal) {
   	var updateTask = this.state.tasks;
-  	updateTask.push(inpVal);
+  	updateTask.unshift(inpVal);
   	this.setState({
   		tasks: updateTask
   	});
+  	this.updateLocalStorage(updateTask);
   }
   removeTask(inpTxt) {
   	var updateTask = this.state.tasks;
@@ -24,6 +30,10 @@ class ToDo extends React.Component {
   	this.setState({
   		tasks: updateTask
   	});
+  	this.updateLocalStorage(updateTask);
+  }
+  updateLocalStorage(updateTask) {
+  	localStorage.setItem('storedTasks', JSON.stringify(updateTask));
   }
   render() {
     return (
